@@ -1,0 +1,20 @@
+%h2 Send a test message
+%table
+  %tbody
+    = form_for :message, url: {controller: "message", action: "create"}, html: {method: :post} do |f|
+      %tr
+        %td{:colspan => 2}
+          = f.text_field :email,  placeholder: "Enter the Recipient's Email."
+      %tr
+        %td{:colspan => 2} 
+          = f.text_area :message,  placeholder: "Enter a Message"
+      %tr
+        %td
+          =f.label :password
+          =f.password_field :password
+        %td
+          =f.label :password_confirmation
+          =f.password_field :password_confirmation
+      %tr
+        %td{:colspan => 2} 
+          = f.submit 'Send', class: 'sendbutton'

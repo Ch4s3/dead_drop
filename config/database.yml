@@ -1,0 +1,16 @@
+development:
+  adapter: postgresql
+  database: dead_drop_dev_db
+
+
+test: &test
+  adapter: postgresql
+  database: dead_drop_test_db
+
+
+production:
+  adapter: postgresql
+  database: dead_drop_prod_db
+
+cucumber:
+  <<: *test
