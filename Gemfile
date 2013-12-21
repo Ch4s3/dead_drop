@@ -18,6 +18,7 @@ gem 'unicorn'
 group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem "brakeman", :require => false
   gem 'pry-rails'
   gem 'rspec-rails'
 end

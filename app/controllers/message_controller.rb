@@ -1,6 +1,7 @@
 class MessageController < ApplicationController
-
-	def create
+  force_ssl unless Rails.env.development?
+  
+  def create
 		@message = Message.new(message_params)
 		if @message.save
       redirect_to root_path notice: 'Your Message Has Been Sent'
